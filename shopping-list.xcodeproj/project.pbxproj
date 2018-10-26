@@ -55,6 +55,7 @@
 		39F5AEF52183BB6F0023D744 /* shopping-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shopping-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F5AEF92183BB6F0023D744 /* shopping_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopping_listUITests.swift; sourceTree = "<group>"; };
 		39F5AEFB2183BB6F0023D744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F5AF072183BF9F0023D744 /* shopping-list.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "shopping-list.entitlements"; sourceTree = "<group>"; };
 		3E822BB3CB1ECA78A26C2967 /* Pods-shopping-listUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopping-listUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shopping-listUITests/Pods-shopping-listUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85C1136B115A2D546D2A0F60 /* Pods-shopping-listTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopping-listTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shopping-listTests/Pods-shopping-listTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99A5FDA4F3730DE7201104AA /* Pods-shopping-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopping-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shopping-list/Pods-shopping-list.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		39F5AED52183BB6E0023D744 /* shopping-list */ = {
 			isa = PBXGroup;
 			children = (
+				39F5AF072183BF9F0023D744 /* shopping-list.entitlements */,
 				39F5AED62183BB6E0023D744 /* AppDelegate.swift */,
 				39F5AED82183BB6E0023D744 /* ViewController.swift */,
 				39F5AEDA2183BB6E0023D744 /* Main.storyboard */,
@@ -240,6 +242,11 @@
 				TargetAttributes = {
 					39F5AED22183BB6E0023D744 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					39F5AEE92183BB6F0023D744 = {
 						CreatedOnToolsVersion = 10.0;
@@ -576,6 +583,7 @@
 			baseConfigurationReference = 99A5FDA4F3730DE7201104AA /* Pods-shopping-list.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "shopping-list/shopping-list.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8YAXWURG9;
 				INFOPLIST_FILE = "shopping-list/Info.plist";
@@ -583,7 +591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "UISimple.shopping-list";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oupisey.it.jp.new.shopping-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,6 +603,7 @@
 			baseConfigurationReference = A3E2626170DA06125E011AD1 /* Pods-shopping-list.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "shopping-list/shopping-list.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8YAXWURG9;
 				INFOPLIST_FILE = "shopping-list/Info.plist";
@@ -602,7 +611,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "UISimple.shopping-list";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oupisey.it.jp.new.shopping-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
